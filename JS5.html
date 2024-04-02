@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Name Input</title>
+</head>
+<body>
+    <p> </p>
+    <label for="nameInput">Enter your name:</label>
+    <input type="text" id="nameInput">
+    <button onclick="captureName()">Capture Name</button>
+    <div id="display-name"></div>
+
+    <script>
+        // JavaScript function to capture user's name from the input field
+        function captureName() {
+            var userName = document.getElementById("nameInput").value;
+            if (userName.trim() !== "") {
+                document.getElementById("display-name").innerHTML = "Hello, " + userName + "! Welcome to our website.";
+            } else {
+                document.getElementById("display-name").innerHTML = "Hello, anonymous! Welcome to our website.";
+            }
+        }
+    </script>
+</body>
+</html>

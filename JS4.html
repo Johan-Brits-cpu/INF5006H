@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Name Prompt</title>
+<script>
+    // JavaScript function to prompt user for their name
+    function captureName() {
+        var userName = prompt("Please enter your name:", "");
+        if (userName != null && userName != "") {
+            document.getElementById("display-name").innerHTML = "Hello, " + userName + "! Welcome to our website.";
+        } else {
+            document.getElementById("display-name").innerHTML = "Hello, anonymous! Welcome to our website.";
+        }
+    }
+</script>
+</head>
+<body>
+    <p> Hi there! Please enter your name :-) </p>
+    <div id="display-name"></div>
+    <button onclick="captureName()">Capture Name</button>
+</body>
+</html>
